@@ -1,0 +1,34 @@
+package recursion;
+
+public class RecursionDemo {
+
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//
+//	}
+//	
+//	public static boolean isPal(String s) { 
+//		if (s.length() <= 1 ) return true;
+//		int n = s.length()-1;
+//		// s[0] + s[1..n-1] + s[n] 
+//		
+//		return s.charAt(0) == s.charAt(n) && isPal(s.substring(1, n));
+//		
+//		
+//	}
+	
+	 class Widget {
+	    private final int x;
+	    private final int y;
+	    /** true when important data is stored only in x, 
+	      * false when it is stored only in y. */
+	    private final boolean usesX;
+	    public boolean equals(Object ob) {
+	        if (ob == null || getClass() != ob.getClass()) return false;
+	        Widget w= (Widget)ob;
+	        if (usesX) { return this.x == w.x; }
+	        else { return this.y == w.y; }
+	    }
+	}
+
+}
