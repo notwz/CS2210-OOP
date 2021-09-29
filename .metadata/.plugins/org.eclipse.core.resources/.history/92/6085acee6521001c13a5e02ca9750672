@@ -1,0 +1,26 @@
+package linkedlist;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.LinkedList;
+
+import org.junit.jupiter.api.Test;
+import java.util.*;
+
+class DListTest {
+	
+  
+
+    @Test
+    void testReverse() {
+    	  DList<Integer> ll = new DList<>(); 
+    	    ll.append(8);
+    	    ll.append(7);
+    	    ll.append(4);
+    	    assertEquals("[8, 7, 4]", ll.toStringR());
+    	   
+    	    
+    	
+    }
+
+}

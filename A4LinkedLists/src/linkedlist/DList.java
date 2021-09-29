@@ -83,7 +83,7 @@ public class DList<E> {
     		n=n.pred;
     		if (n != null) res.append(", ");
     	}
-        return "";
+        return res + "]";
     }
 
     /** Insert v at the beginning of the list. <br>
@@ -94,8 +94,12 @@ public class DList<E> {
         // method toStringR thoroughly before starting on the next
         // method. These two must be correct in order to be
         // able to write and test all the others.
-    	Node n = head;
-    	n.pred.val = v;
+    	Node n = new Node(null, v, head);    	
+    	if (head != null) 
+    		head.pred = n;
+    	else
+    		tail = n;
+    	head = n;
     	size++;
 
     }
@@ -106,9 +110,15 @@ public class DList<E> {
     public void append(E v) {
         // TODO 3. This is the second method to write and test.
         // Test it thoroughly before writing any others.
-    	Node n = tail;
-    	n.succ.val = v;
+    	
+    	Node n = new Node(tail, v, null); 
+    	if (tail != null) 
+    		tail.succ =n;
+    	else 
+    		head = n;
+    	tail = n;
     	size++;
+    	
 
     }
 
@@ -120,8 +130,20 @@ public class DList<E> {
         // For example, if h < size/2, search from the beginning of the
         // list, otherwise search from the end of the list. If h = size/2,
         // search from either end; it doesn't matter.
-
-        return null;
+    	assert 0 <= h && h <= size;
+    	if (h < size/2) {
+    		Node n = head;
+    		for (int i = 0; i < h; i++) {
+    			n = n.succ;
+    		}
+    		return n;
+    	} else {
+    		Node n = tail;
+    		for (int i = size-1; i > h; i--) {
+    			n = n.pred;
+    		}
+    		return n;
+    	}
     }
 
     /** Remove node n from this list. <br>
@@ -149,7 +171,12 @@ public class DList<E> {
     public void insertAfter(E v, Node n) {
         // TODO 6. Make sure this method takes constant time.
     	assert n != null;
-
+    	Node a = new Node(n, v, n.succ());
+    	n.succ = a;
+    	if ( a.succ != null)
+    		a.succ.pred = a;
+    	else tail = a;
+    	size++;
     }
 
     /*********************/
