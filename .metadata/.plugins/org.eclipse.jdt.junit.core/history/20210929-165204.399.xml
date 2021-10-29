@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="DListTest" project="A4LinkedLists" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="linkedlist.DListTest" time="0.016" displayname="DListTest" uniqueid="[engine:junit-jupiter]/[class:linkedlist.DListTest]">
-    <testcase name="testPrependAndToStringR" classname="linkedlist.DListTest" time="0.015" displayname="testPrependAndToStringR()" uniqueid="[engine:junit-jupiter]/[class:linkedlist.DListTest]/[method:testPrependAndToStringR()]"/>
-    <testcase name="testConstructor" classname="linkedlist.DListTest" time="0.0" displayname="testConstructor()" uniqueid="[engine:junit-jupiter]/[class:linkedlist.DListTest]/[method:testConstructor()]"/>
-  </testsuite>
-</testrun>

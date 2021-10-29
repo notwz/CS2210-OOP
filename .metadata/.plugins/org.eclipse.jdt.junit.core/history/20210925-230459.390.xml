@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="DListTest" project="A4LinkedLists" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="linkedlist.DListTest" time="0.016" displayname="DListTest" uniqueid="[engine:junit-jupiter]/[class:linkedlist.DListTest]">
-    <testcase name="testReverse" classname="linkedlist.DListTest" time="0.016" displayname="testReverse()" uniqueid="[engine:junit-jupiter]/[class:linkedlist.DListTest]/[method:testReverse()]"/>
-  </testsuite>
-</testrun>
