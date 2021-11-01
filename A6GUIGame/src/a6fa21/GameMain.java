@@ -4,6 +4,7 @@ package a6fa21;
  * NetId(s): wz282 TODO
  * Time spent: 10 hours, 00 minutes
  * What I thought about this assignment:
+ * Cool game, some of the specifications didn't seem too specific enough. Also the GUI looks very outdated. 
  *
  */
 import java.awt.BorderLayout;

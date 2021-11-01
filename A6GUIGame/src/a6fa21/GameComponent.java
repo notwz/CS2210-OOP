@@ -166,14 +166,9 @@ public class GameComponent extends JPanel implements MouseListener {
     	int clickX = e.getX();
     	int clickY = e.getY();
     	
-    	System.out.println("Mouse Clicked");
     	
     	if (target.checkHit(clickX, clickY)) { 
-        	System.out.println("Clicked the Target!! ");
-        	System.out.println("Score is now: " + getScore());
-
-    		setScore(getScore() + 1);
-    		
+    		setScore(getScore() + 1);	
     		target.isHit = true;
     		
     	}
@@ -229,9 +224,6 @@ public class GameComponent extends JPanel implements MouseListener {
         	}
         	
         	if (isHit) { 
-        		System.out.println("Is hit is true, now painting dot to red...");
-            	System.out.println("x = " + x);
-            	System.out.println("y = " + y);
         		g.setColor(Color.RED);
             	g.fillOval(x, y, radius, radius);
         		
@@ -254,14 +246,9 @@ public class GameComponent extends JPanel implements MouseListener {
         boolean checkHit(int cx, int cy) {
             // TODO 7: Implement this method according to its specifications
             // (replacing the `throw` statement).
-        	
-        	
         	boolean cx_in_x = (cx >= x - radius  && cx <= x + radius);
         	boolean cy_in_y = (cy >= y - radius && cy <= y + radius);
-        	if(!isHit && cx_in_x && cy_in_y) { 
-        		System.out.println("Check hit is true");
-        		return true;
-        	}
+        	if(!isHit && cx_in_x && cy_in_y) return true;
             return false;
         }
     }
