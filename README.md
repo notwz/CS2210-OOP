@@ -1,6 +1,4 @@
 # CS2210-OOP
  Cornell's OOP in Java course. 
  
- ssssssskttt and i oop and i oop
- 
- - someone, probably
+Taught by Professor Gries and Muhlberger during Fall 21 semester. Includes assignments (PSETs), homeworks, and recitiations in Java using Eclipse IDE. 
